@@ -19,6 +19,9 @@
 .noto-sans {
   font-family: var(--font-noto-sans-kr);
 }
+.inter {
+  font-family: var(--font-inter);
+}
 
 .fcenter {
   @apply flex items-center justify-center
