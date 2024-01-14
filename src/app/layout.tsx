@@ -1,18 +1,29 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Lemon, Noto_Sans_KR } from "next/font/google";
+import { Lemon, Noto_Sans_KR, Inter } from "next/font/google";
 
-const lemon = Lemon({
+const mainFont = Lemon({
   subsets: ["latin"],
-  weight: ["400"]
+  weight: ["400"],
 });
 
-const noto_kr = Noto_Sans_KR({
+const noto = Noto_Sans_KR({
   variable: "--font-noto-sans-kr",
   subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900",]
-})
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
+
+const fontClassName = [noto, inter].reduce(
+  (prev, curr) => prev + " " + curr.variable,
+  mainFont.className
+);
 
 export const metadata: Metadata = {
   title: "Keepgo",
@@ -26,10 +37,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={lemon.className + " " + noto_kr.variable}>
+      <body className={fontClassName + " " + "flex flex-col min-w-[100vw] min-h-[100vh]"}>
         <Navbar />
-        {children}
+        <main className="flex-1">{children}</main>
       </body>
     </html>
   );
-} 
+}

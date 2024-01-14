@@ -12,7 +12,7 @@ const Container = ({
     <div 
     { ...rest }
     className={ rest.className + `
-      ${theme === 'line' && 'border rounded-xl p-6'}
+      ${theme === 'line' && 'border-gray-600 border rounded-xl p-6 bg-semi-dark bg-container-pattern'}
       ${theme === 'blank' && 'p-8'}
     `}>{children}</div>
   )

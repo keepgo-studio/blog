@@ -8,12 +8,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'container-pattern': 'radial-gradient(500px 200px at 50%0,#131f33 20%,rgba(19,30,49,0) 100%)'
       },
       colors: {
-        'personal': '#3557AD'
+        'personal': '#3557AD',
+        'semi-dark': '#161e2c',
+        'dark': '#0f151d',
       }
     },
   },

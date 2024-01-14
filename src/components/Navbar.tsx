@@ -38,7 +38,7 @@ const Navbar = () => {
   useEffect(() => {}, [pathname])
 
   return (
-    <nav className='noto-sans flex sticky top-0 left-0 h-14 items-center justify-between px-4 shadow-md'>
+    <nav className='bg-semi-dark noto-sans flex sticky top-0 left-0 h-14 items-center justify-between px-4 shadow-md'>
       <section>
         <Link href='/' className='block hover:scale-[1.05] duration-300'>
           <Image alt='favicon icon' src='/logo.png' width={32} height={32}/>
@@ -48,11 +48,12 @@ const Navbar = () => {
       <ul className='flex gap-1 text-sm'>
       {ITEMS.map(({ title, href })=> (
         <li key={href} className={`
-          fcenter 
+          fcenter
+          capitalize
           ${pathname === href ? 'text-red-500' : ''}
         `}>
           <Link
-            className='block hover:bg-gray-200 duration-300 p-2 rounded-md'
+            className='block hover:bg-gray-950 duration-300 p-2 rounded-md'
             href={href}
           >{title}</Link>
         </li>
