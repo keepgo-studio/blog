@@ -1,3 +1,4 @@
+import { NextResponse } from "next/server";
 import { Octokit } from "octokit";
 
 export async function GET() {
@@ -15,5 +16,5 @@ export async function GET() {
   })
   .then(res => res.data);
 
-  return Response.json(data)
+  return NextResponse.json(data)
 }
