@@ -9,7 +9,10 @@ const BlogFrame = () => {
   };
 
   return (
-    <iframe src="https://www.naver.com/"/>
+    <iframe 
+      className='absolute top-0 left-0 w-full h-full'
+      src="https://iougou03.github.io/portfolio/"
+    />
   )
 }
 

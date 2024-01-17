@@ -3,7 +3,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
+    <div className='relative w-full min-h-[1020px]'>
       <BlogFrame />
     </div>
   )
